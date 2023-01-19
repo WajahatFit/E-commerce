@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-export const connectDb = async () => {
+const connectDb = async () => {
     mongoose.connect(process.env.MONGODB_URI!, {
         // this are just impostation to make more secure the connection and can be needed in older browsers
         // useNewUrlParser: true,
@@ -8,3 +8,5 @@ export const connectDb = async () => {
     })
     console.log("MongoDB connected ... ")
 }
+
+export default connectDb;
